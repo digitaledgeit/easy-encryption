@@ -1,0 +1,28 @@
+{
+  "name": "easy-encryption",
+  "version": "0.1.0",
+  "description": "A wrapper around the built-in `crypto` module that makes encryption in Node.js easy.",
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "crypto",
+    "cryptography",
+    "encryption",
+    "encode",
+    "decode",
+    "aes",
+    "pbkdf2",
+    "aes-256",
+    "easy"
+  ],
+  "main": "lib/index.js",
+  "author": "James Newell <james@digitaledgeit.com.au>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digitaledgeit/easy-encryption.git"
+  },
+  "bugs": {
+    "url": "https://github.com/digitaledgeit/easy-encryption/issues"
+  },
+  "license": "MIT"
+}
