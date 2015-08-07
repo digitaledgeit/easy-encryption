@@ -1,6 +1,8 @@
 # easy-encryption
 
-A wrapper around the built-in `crypto` module that makes encryption in Node.js easy. 
+[![Circle CI](https://circleci.com/gh/digitaledgeit/easy-encryption.svg?style=svg)](https://circleci.com/gh/digitaledgeit/easy-encryption)
+
+A wrapper around the built-in `crypto` module that makes encryption easy in Node.js. 
 
 Uses the `AES-256-CBC` algorithm for encryption and the `pbkdf2` algorithm to derive keys for protection against dictionary attacks.
 

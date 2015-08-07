@@ -1,7 +1,7 @@
 {
   "name": "easy-encryption",
-  "version": "0.1.0",
-  "description": "A wrapper around the built-in `crypto` module that makes encryption in Node.js easy.",
+  "version": "0.1.1",
+  "description": "A wrapper around the built-in `crypto` module that makes encryption easy in Node.js.",
   "keywords": [
     "encrypt",
     "decrypt",
@@ -10,9 +10,10 @@
     "encryption",
     "encode",
     "decode",
-    "aes",
-    "pbkdf2",
-    "aes-256",
+    "AES",
+    "AES-256",
+    "AES-256-CBC",
+    "PBKDF2",
     "easy"
   ],
   "main": "lib/index.js",
@@ -23,6 +24,12 @@
   },
   "bugs": {
     "url": "https://github.com/digitaledgeit/easy-encryption/issues"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "mocha"
   },
   "license": "MIT"
 }
