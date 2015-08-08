@@ -29,7 +29,10 @@
     "mocha": "^2.2.5"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "JUNIT_REPORT_PATH=$CIRCLE_TEST_REPORTS/results.xml mocha --reporter mocha-junit-reporter"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mocha-junit-reporter": "^1.6.1"
+  }
 }
