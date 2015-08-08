@@ -90,7 +90,7 @@ describe('easy-encryption', function() {
       assert.equal(
         Cipher.decrypt(
           'password',
-          'fbeec170dbba9691d4df6bd706093a7a0a143d18ca936cec838e8deca332bb15'
+          'fbeec170dbba9691d4df6bd706093a7a0a143d18ca936cec838e8deca332bb15a'
         ),
         'This message is TOP secret!!!'
       );
