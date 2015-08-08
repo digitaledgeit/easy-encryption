@@ -26,13 +26,11 @@
     "url": "https://github.com/digitaledgeit/easy-encryption/issues"
   },
   "devDependencies": {
-    "mocha": "^2.2.5"
+    "mocha": "^2.2.5",
+    "mocha-jenkins-reporter": "^0.1.9"
   },
   "scripts": {
-    "test": "JUNIT_REPORT_PATH=$CIRCLE_TEST_REPORTS/results.xml mocha --reporter mocha-junit-reporter"
+    "test": "JUNIT_REPORT_PATH=$CIRCLE_TEST_REPORTS/results.xml mocha --reporter mocha-jenkins-reporter"
   },
-  "license": "MIT",
-  "dependencies": {
-    "mocha-junit-reporter": "^1.6.1"
-  }
+  "license": "MIT"
 }
