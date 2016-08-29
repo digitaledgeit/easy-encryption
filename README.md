@@ -2,41 +2,41 @@
 
 [![Circle CI](https://circleci.com/gh/digitaledgeit/easy-encryption.svg?style=svg)](https://circleci.com/gh/digitaledgeit/easy-encryption)
 
-A wrapper around the built-in `crypto` module that makes encryption easy in Node.js. 
+A wrapper around the built-in `crypto` module that makes encryption easy in Node.js.
 
 Uses the `AES-256-CBC` algorithm for encryption and the `pbkdf2` algorithm to derive keys for protection against dictionary attacks.
 
 ## Installation
 
     npm install --save easy-encryption
-    
+
 ## Usage
 
 With zero configuration:
 
     var ee = require('easy-encryption');
-    
+
     var ciphertext  = ee.encrypt('password', 'This message is TOP secret!!!');
     var plaintext   = ee.decrypt('password', ciphertext);
 
     console.log(ciphertext);  //outputs: "<iv>$<salt>$<ciphertext>"
     console.log(plaintext);   //outputs: "This message is TOP secret!!!"
-    
+
 With some configuration:
 
     var Cipher = require('easy-encryption');
-    
+
     var cipher = new Cipher({
-      secret:     'password', 
+      secret:     'password',
       iterations: 8192
     });
-    
+
     var ciphertext  = cipher.encrypt('This message is TOP secret!!!');
     var plaintext   = cipher.decrypt(ciphertext);
-    
+
     console.log(ciphertext);  //outputs: "<iv>$<salt>$<ciphertext>"
     console.log(plaintext);   //outputs: "This message is TOP secret!!!"
-    
+
 ## API
 
 ### .encrypt(secret, plaintext)
@@ -61,6 +61,9 @@ Encrypt some text with a secret
 ### cipher.decrypt([secret], ciphertext)
 
 Decrypt some encrypted text with a secret
+
+## Encryption output
+A random salt is used for the encryption process, so each call to `.encrypt(secret, plaintext)` will result in a different encrypted string. To compare encrypted strings, decrypt both and compare the plaintext.
 
 ## License
 
